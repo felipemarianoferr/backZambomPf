@@ -1,7 +1,14 @@
 package br.insper.af.tarefa;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection = "tarefa")
 public class Tarefa {
+
+    @Id
     private String id;
+
     private String titulo;
     private String descricao;
     private String prioridade;
